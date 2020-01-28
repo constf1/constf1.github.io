@@ -1,10 +1,17 @@
 /*
 * Mandaic Keyboard Prototype
 */
-span.HALQA {
+span.GLYPH {
   display: inline-block;
   height: 32px;
   width: 32px;
-  background-image: url("/res/gliph.png");
+  background-image: url("/res/glyph.png");
+}
+
+span.HALQA {
   background-position: -32px -32px;
+}
+
+span.AB {
+  background-position: -32px -94px;
 }
