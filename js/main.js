@@ -3,6 +3,8 @@
 /**
 * Mandaic alphabet
 */
+const firstCodeUnit = 0x0840;
+
 const letters = [
   'HALQA', 'AB', 'AG', 'AD', 'AH',
   'USHENNA', 'AZ', 'IT', 'ATT', 'AKSA',
@@ -23,6 +25,9 @@ letters.forEach((letter, index) => {
     const el = document.createElement('span');
     el.className = 'GLYPH ' + letter;
     result.appendChild(el);
+    
+    const input = document.getElementById('MANDAIC_KEYBOARD_INPUT');
+    input.value = (input.value || '') + String.fromCharCode(firstCodeUnit + index);
   };
   keyboard.appendChild(btn);
 });
