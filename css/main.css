@@ -1,3 +1,10 @@
 /*
 * Mandaic Keyboard Prototype
 */
+span.HALQA {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  background-image: url("/res/gliph.png");
+  background-position: -32px -32px;
+}
