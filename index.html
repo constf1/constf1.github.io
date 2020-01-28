@@ -11,10 +11,12 @@
   <section id="MANDAIC_KEYBOARD"></section>
   <section>
     <input type="text" value="" id="MANDAIC_KEYBOARD_INPUT">
-    <button onclick="doCopy()" onmouseout="resetTooltip()">
-      <span class="tooltiptext" id="COPY_TOOLTIP">Copy to clipboard</span>
-      Copy text
-    </button>
+    <div class="tooltip">
+      <button onclick="doCopy()" onmouseout="resetTooltip()">
+        <span class="tooltiptext" id="COPY_TOOLTIP">Copy to clipboard</span>
+        Copy text
+      </button>
+    </div>
   </section>
   
   <script src="js/main.js"></script>
