@@ -21,7 +21,7 @@ letters.forEach((letter, index) => {
   btn.innerText = letter;
   btn.onclick = () => {
     const el = document.createElement('span');
-    el.className = letter;
+    el.className = 'GLYPH ' + letter;
     result.appendChild(el);
   };
   keyboard.appendChild(btn);
