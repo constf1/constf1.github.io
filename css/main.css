@@ -3,67 +3,86 @@
 */
 span.GLYPH {
   display: inline-block;
-  height: 32px;
-  width: 32px;
+  height: 36px;
+  width: 36px;
   background-image: url("/res/glyph.png");
 }
 
 span.HALQA {
   background-position: -32px -34px;
 }
-
 span.AB {
   background-position: -32px -94px;
 }
-
 span.AG {
   background-position: -32px -152px;
 }
-
 span.AD {
   background-position: -32px -210px;
 }
-
 span.AH {
   background-position: -32px -268px;
 }
-
 span.USHENNA {
   background-position: -32px -326px;
 }
-
 span.AZ {
   background-position: -32px -384px;
 }
-
 span.IT {
   background-position: -32px -442px;
 }
-
 span.ATT {
   background-position: -32px -500px;
 }
-
 span.AKSA {
   background-position: -32px -558px;
 }
-
 span.AK {
   background-position: -32px -616px;
 }
-
 span.AL {
   background-position: -32px -674px;
 }
-
 span.AM {
   background-position: -32px -732px;
 }
-
 span.AN {
   background-position: -32px -790px;
 }
-
 span.AS {
   background-position: -32px -848px;
+}
+span.IN {
+  background-position: -32px -906px;
+}
+span.AP {
+  background-position: -80px -34px;
+}
+span.ASZ {
+  background-position: -80px -94px;
+}
+span.AQ {
+  background-position: -80px -152px;
+}
+span.AR {
+  background-position: -80px -210px;
+}
+span.ASH {
+  background-position: -80px -268px;
+}
+span.AT {
+  background-position: -80px -326px;
+}
+span.DUSHENNA {
+  background-position: -80px -384px;
+}
+span.KAD {
+  background-position: -80px -442px;
+}
+span.AIN {
+  background-position: -80px -500px;
+}
+span.AKSA {
+  background-position: -32px -558px;
 }
