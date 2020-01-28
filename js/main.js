@@ -1,1 +1,11 @@
 // Mandaic Keyboard Prototype
+
+/**
+* Mandaic alphabet
+*/
+const letters = [
+  'HALQA', 'AB', 'AG', 'AD', 'AH',
+  'USHENNA', 'AZ', 'IT', 'ATT', 'AKSA',
+  'AK', 'AL', 'AM', 'AN', 'AS',
+  'IN', 'AP', 'ASZ', 'AQ', 'AR',
+  'ASH', 'AT', 'DUSHENNA', 'KAD', 'AIN'];
