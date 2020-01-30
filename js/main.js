@@ -12,9 +12,7 @@ const letters = [
   'IN', 'AP', 'ASZ', 'AQ', 'AR',
   'ASH', 'AT', 'DUSHENNA', 'KAD', 'AIN'];
 
-const result = document.createElement('div');
-result.className = 'result';
-
+const result = document.getElementById('MANDAIC_KEYBOARD_RESULT');
 const keyboard = document.getElementById('MANDAIC_KEYBOARD');
 
 // Append letters
@@ -31,6 +29,3 @@ letters.forEach((letter, index) => {
   };
   keyboard.appendChild(btn);
 });
-
-// Append result
-keyboard.appendChild(result);
