@@ -23,7 +23,8 @@ letters.forEach((letter, index) => {
     const el = document.createElement('span');
     el.className = 'GLYPH ' + letter;
     el.title = letter;
-    result.appendChild(el);
+    result.prepend(el);
+    // result.appendChild(el);
     
     const input = document.getElementById('MANDAIC_KEYBOARD_INPUT');
     input.value = (input.value || '') + String.fromCharCode(firstCodeUnit + index);
