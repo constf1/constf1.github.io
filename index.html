@@ -18,6 +18,11 @@
         Copy text
       </button>
     </div>
+    <div>
+      <button onclick="doClear()">
+        Clear text
+      </button>
+    </div>
   </section>
   
   <script src="js/main.js"></script>
@@ -35,6 +40,12 @@
     function resetTooltip() {
       var tooltip = document.getElementById("COPY_TOOLTIP");
       tooltip.innerHTML = "Copy to clipboard";
+    }
+    function doClear() {
+      var copyText = document.getElementById("MANDAIC_KEYBOARD_INPUT");
+      var result = document.getElementById("MANDAIC_KEYBOARD_RESULT");
+      copyText.value = "";
+      result.innerHTML = "";
     }
 </script>
 </body>
