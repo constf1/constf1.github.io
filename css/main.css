@@ -1,6 +1,12 @@
 /*
 * Mandaic Keyboard Prototype
 */
+button.GLYPH {
+  height: 63px;
+  width: 51px;
+  background-image: url("/res/glyph.png");
+}
+
 span.GLYPH {
   display: inline-block;
   height: 36px;
@@ -8,9 +14,13 @@ span.GLYPH {
   background-image: url("/res/glyph.png");
 }
 
+button.HALQA {
+  background-position: -26px -23px;
+}
 span.HALQA {
   background-position: -32px -34px;
 }
+
 span.AB {
   background-position: -32px -94px;
 }
