@@ -22,6 +22,7 @@ letters.forEach((letter, index) => {
   btn.onclick = () => {
     const el = document.createElement('span');
     el.className = 'GLYPH ' + letter;
+    el.title = letter;
     result.appendChild(el);
     
     const input = document.getElementById('MANDAIC_KEYBOARD_INPUT');
