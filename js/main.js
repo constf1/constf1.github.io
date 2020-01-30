@@ -18,8 +18,8 @@ const keyboard = document.getElementById('MANDAIC_KEYBOARD');
 // Append letters
 letters.forEach((letter, index) => {
   const btn = document.createElement('button');
-  btn.innerText = letter;
-  btn.className = letter;
+  btn.title = letter;
+  btn.className = 'GLYPH ' + letter;
   btn.onclick = () => {
     const el = document.createElement('span');
     el.className = 'GLYPH ' + letter;
