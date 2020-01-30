@@ -5,6 +5,7 @@ button.GLYPH {
   height: 63px;
   width: 51px;
   background-image: url("/res/glyph.png");
+  background-position: -72px -720px;
 }
 
 span.GLYPH {
@@ -129,30 +130,66 @@ button.IN {
 span.AP {
   background-position: -80px -34px;
 }
+button.AP {
+  background-position-y: -23px;
+}
+
 span.ASZ {
   background-position: -80px -94px;
 }
+button.ASZ {
+  background-position-y: -81px;
+}
+
 span.AQ {
   background-position: -80px -152px;
 }
+button.AQ {
+  background-position-y: -139px;
+}
+
 span.AR {
   background-position: -80px -210px;
 }
+button.AR {
+  background-position-y: -197px;
+}
+
 span.ASH {
   background-position: -80px -268px;
 }
+button.ASH {
+  background-position-y: -255px;
+}
+
 span.AT {
   background-position: -80px -326px;
 }
+button.AT {
+  background-position-y: -313px;
+}
+
 span.DUSHENNA {
   background-position: -80px -384px;
 }
+button.DUSHENNA {
+  background-position-y: -371px;
+}
+
 span.KAD {
   background-position: -80px -442px;
 }
+button.KAD {
+  background-position-y: -429px;
+}
+
 span.AIN {
   background-position: -80px -500px;
 }
+button.AIN {
+  background-position-y: -487px;
+}
+
 
 /**
 * Tooltip style
