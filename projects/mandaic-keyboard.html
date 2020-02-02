@@ -4,7 +4,240 @@
 <head>
   <title>Mandaic Keyboard Prototype</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <style>
+.GLYPH {
+  background-image: url("/res/glyph.png");
+}
+    
+button.GLYPH {
+  height: 63px;
+  width: 51px;
+  background-position: -72px -720px;
+}
+
+span.GLYPH {
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+}
+
+button.HALQA {
+  background-position: -26px -23px;
+}
+span.HALQA {
+  background-position: -32px -34px;
+}
+
+span.AB {
+  background-position: -32px -94px;
+}
+button.AB {
+  background-position: -26px -81px;
+}
+
+span.AG {
+  background-position: -32px -152px;
+}
+button.AG {
+  background-position: -26px -139px;
+}
+
+span.AD {
+  background-position: -32px -210px;
+}
+button.AD {
+  background-position: -26px -197px;
+}
+
+span.AH {
+  background-position: -32px -268px;
+}
+button.AH {
+  background-position: -26px -255px;
+}
+
+span.USHENNA {
+  background-position: -32px -326px;
+}
+button.USHENNA {
+  background-position: -26px -313px;
+}
+
+span.AZ {
+  background-position: -32px -384px;
+}
+button.AZ {
+  background-position: -26px -371px;
+}
+
+span.IT {
+  background-position: -32px -442px;
+}
+button.IT {
+  background-position: -26px -429px;
+}
+
+span.ATT {
+  background-position: -32px -500px;
+}
+button.ATT {
+  background-position: -26px -487px;
+}
+
+span.AKSA {
+  background-position: -32px -558px;
+}
+button.AKSA {
+  background-position: -26px -545px;
+}
+
+span.AK {
+  background-position: -32px -616px;
+}
+button.AK {
+  background-position: -26px -604px;
+}
+
+span.AL {
+  background-position: -32px -674px;
+}
+button.AL {
+  background-position: -26px -662px;
+}
+
+span.AM {
+  background-position: -32px -732px;
+}
+button.AM {
+  background-position: -26px -720px;
+}
+
+span.AN {
+  background-position: -32px -790px;
+}
+button.AN {
+  background-position: -26px -778px;
+}
+
+span.AS {
+  background-position: -32px -848px;
+}
+button.AS {
+  background-position: -26px -836px;
+}
+
+span.IN {
+  background-position: -32px -906px;
+}
+button.IN {
+  background-position: -26px -894px;
+}
+
+span.AP {
+  background-position: -80px -34px;
+}
+button.AP {
+  background-position-y: -23px;
+}
+
+span.ASZ {
+  background-position: -80px -94px;
+}
+button.ASZ {
+  background-position-y: -81px;
+}
+
+span.AQ {
+  background-position: -80px -152px;
+}
+button.AQ {
+  background-position-y: -139px;
+}
+
+span.AR {
+  background-position: -80px -210px;
+}
+button.AR {
+  background-position-y: -197px;
+}
+
+span.ASH {
+  background-position: -80px -268px;
+}
+button.ASH {
+  background-position-y: -255px;
+}
+
+span.AT {
+  background-position: -80px -326px;
+}
+button.AT {
+  background-position-y: -313px;
+}
+
+span.DUSHENNA {
+  background-position: -80px -384px;
+}
+button.DUSHENNA {
+  background-position-y: -371px;
+}
+
+span.KAD {
+  background-position: -80px -442px;
+}
+button.KAD {
+  background-position-y: -429px;
+}
+
+span.AIN {
+  background-position: -80px -500px;
+}
+button.AIN {
+  background-position-y: -487px;
+}
+
+
+/**
+* Tooltip style
+*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+  </style>
 </head>
 
 <body>
