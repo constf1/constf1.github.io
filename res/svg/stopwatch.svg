@@ -1,4 +1,4 @@
-<svg width="880" height="1000" xmlns="http://www.w3.org/2000/svg">
+<svg width="750" height="750" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="filterShadowLg">
       <feDropShadow dx="7" dy="7" stdDeviation="7" />
@@ -47,7 +47,7 @@
     </linearGradient>
   </defs>
   <!-- <image href="stopwatch-880x880.png" height="880" width="880" style="visibility: hidden;" /> -->
-  <g transform="translate(439 511)">
+  <g transform="translate(375 375)">
     <g>
       <g filter="url(#filterShadowLg)">
         <g transform="rotate(-45) translate(-30 -400)">
