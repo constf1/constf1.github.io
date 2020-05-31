@@ -1,0 +1,285 @@
+<svg width="880" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="filterShadowLg">
+      <feDropShadow dx="7" dy="7" stdDeviation="7" />
+    </filter>
+    <filter id="filterShadowMd">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" />
+    </filter>
+    <filter id="filterShadowSm">
+      <feDropShadow dx="1" dy="1" stdDeviation="1" />
+    </filter>
+    <radialGradient id="radialGradientClockFace">
+      <stop offset="0%" stop-color="#DBDBDB" />
+      <stop offset="80%" stop-color="#DBDBDB" />
+      <stop offset="85%" stop-color="#EAEAEA" />
+      <stop offset="92%" stop-color="#DBDBDB" />
+      <stop offset="95%" stop-color="#F2F2F2" />
+      <stop offset="100%" stop-color="#969696" />
+    </radialGradient>
+    <radialGradient id="radialGradientClockButtonStart">
+      <stop offset="0%" stop-color="#2d2d96" />
+      <stop offset="91%" stop-color="#7272DB" />
+      <stop offset="100%" stop-color="#2d2d96" />
+    </radialGradient>
+    <radialGradient id="radialGradientClockButtonReset">
+      <stop offset="0%" stop-color="#962d2d" />
+      <stop offset="91%" stop-color="#DB7272" />
+      <stop offset="100%" stop-color="#962d2d" />
+    </radialGradient>
+    <linearGradient id="linearGradientClockButtonStart">
+      <stop offset="0%" stop-color="#2d2d96" />
+      <stop offset="36%" stop-color="#7272DB" />
+      <stop offset="61%" stop-color="#8181EA" />
+      <stop offset="100%" stop-color="#000069" />
+    </linearGradient>
+    <linearGradient id="linearGradientClockButtonReset">
+      <stop offset="0%" stop-color="#962d2d" />
+      <stop offset="36%" stop-color="#DB7272" />
+      <stop offset="61%" stop-color="#EA8181" />
+      <stop offset="100%" stop-color="#690000" />
+    </linearGradient>
+    <linearGradient id="linearGradientClockButtonCylinder">
+      <stop offset="0%" stop-color="#969696" />
+      <stop offset="33%" stop-color="#DBDBDB" />
+      <stop offset="66%" stop-color="#EAEAEA" />
+      <stop offset="100%" stop-color="#696969" />
+    </linearGradient>
+  </defs>
+  <!-- <image href="stopwatch-880x880.png" height="880" width="880" style="visibility: hidden;" /> -->
+  <g transform="translate(439 511)">
+    <g>
+      <g filter="url(#filterShadowLg)">
+        <g transform="rotate(-45) translate(-30 -400)">
+          <rect width="60" height="50" stroke="none" fill="url(#linearGradientClockButtonCylinder)" />
+          <g id="clockButtonStart" cursor="pointer" transform="translate(60 -55) rotate(180)">
+            <title>Start/Pause/Resume button</title>
+            <path fill="url(#linearGradientClockButtonStart)"
+              d="M -7 -61 a 30 7 0 0 1 74 0 v 70 a 30 7 0 0 0 -74 0 z" />
+            <path fill="url(#radialGradientClockButtonStart)" d="M -7 9 a 30 7 0 0 1 74 0 a 30 7 0 0 1 -74 0" />
+            <animateMotion dur="0.28s" repeatCount="1" path="M0 0 l0 30 z" begin="clockButtonStart.click" />
+          </g>
+        </g>
+        <g transform="rotate(45) translate(-30 -400)">
+          <rect width="60" height="50" stroke="none" fill="url(#linearGradientClockButtonCylinder)" />
+          <g id="clockButtonReset" cursor="pointer" transform="translate(60 -55) rotate(180)">
+            <title>Stop/Reset button</title>
+            <path fill="url(#linearGradientClockButtonReset)"
+              d="M -7 -61 a 30 7 0 0 1 74 0 v 70 a 30 7 0 0 0 -74 0 z" />
+            <path fill="url(#radialGradientClockButtonReset)" d="M -7 9 a 30 7 0 0 1 74 0 a 30 7 0 0 1 -74 0" />
+            <animateMotion dur="0.28s" repeatCount="1" path="M0 0 l0 30 z" begin="clockButtonReset.click" />
+          </g>
+        </g>
+        <circle r="354" fill="url(#radialGradientClockFace)" />
+      </g>
+      <circle r="290" fill="#F2F2F2" stroke="black" stroke-width="2" />
+
+      <g stroke-linecap="round" stroke="rgba(0,0,0,1)">
+        <g id="clockFaceSTickGroup15">
+          <g id="clockFaceSTickGroup5">
+            <!-- <line x1="0" x2="0" y1="-289" y2="0" stroke-width="0.5" stroke="magenta" /> -->
+            <!-- <line x1="0" x2="0" y1="-289" y2="0" stroke-width="1" stroke="magenta" transform="rotate(6)"/> -->
+            <!-- <line x1="0" x2="0" y1="-289" y2="0" stroke-width="1" stroke="magenta" transform="rotate(-6)"/> -->
+            <line x1="0" x2="0" y1="-289" y2="-253" stroke-width="3" />
+            <g id="clockFaceSTickGroup1">
+              <g id="clockFaceSTickGroup0" transform="rotate(1)">
+                <line id="clockFaceSTickSm" x1="0" x2="0" y1="-289" y2="-273" stroke-width="1" />
+                <use href="#clockFaceSTickSm" transform="rotate(1)" />
+                <use href="#clockFaceSTickSm" transform="rotate(2)" />
+                <use href="#clockFaceSTickSm" transform="rotate(3)" />
+                <use href="#clockFaceSTickSm" transform="rotate(4)" />
+              </g>
+              <line x1="0" x2="0" y1="-289" y2="-265" stroke-width="2" transform="rotate(6)" />
+            </g>
+            <use href="#clockFaceSTickGroup1" transform="rotate(6)" />
+            <use href="#clockFaceSTickGroup1" transform="rotate(12)" />
+            <use href="#clockFaceSTickGroup1" transform="rotate(18)" />
+            <use href="#clockFaceSTickGroup0" transform="rotate(24)" />
+          </g>
+          <use href="#clockFaceSTickGroup5" transform="rotate(30)" />
+          <use href="#clockFaceSTickGroup5" transform="rotate(60)" />
+        </g>
+        <use href="#clockFaceSTickGroup15" transform="rotate(90)" />
+        <use href="#clockFaceSTickGroup15" transform="rotate(180)" />
+        <use href="#clockFaceSTickGroup15" transform="rotate(270)" />
+      </g>
+
+      <g transform="translate(-30 20)" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="400">
+        <g fill="darkred">
+          <text transform="translate(0 -222)">60s</text>
+          <text transform="rotate(60) translate(0 -222) rotate(-60)">10</text>
+          <text transform="rotate(120) translate(0 -222) rotate(-120)">20</text>
+          <text transform="translate(0 222)">30</text>
+          <text transform="rotate(240) translate(0 -222) rotate(-240)">40</text>
+          <text transform="rotate(300) translate(0 -222) rotate(-300)">50</text>
+        </g>
+        <g fill="black">
+          <text transform="translate(18) rotate(30) translate(0 -222) rotate(-30)">5</text>
+          <text transform="rotate(90) translate(0 -222) rotate(-90)">15</text>
+          <text transform="rotate(150) translate(0 -222) rotate(-150)">25</text>
+          <text transform="rotate(210) translate(0 -222) rotate(-210)">35</text>
+          <text transform="rotate(270) translate(0 -222) rotate(-270)">45</text>
+          <text transform="rotate(330) translate(0 -222) rotate(-330)">55</text>
+        </g>
+      </g>
+      <!-- <circle r="250" fill="none" stroke="magenta" /> -->
+      <!-- <circle r="220" fill="none" stroke="magenta" /> -->
+      <!-- <circle r="190" fill="none" stroke="magenta" /> -->
+
+      <g id="clockFaceMinutes" transform="translate(105)">
+        <circle r="76" fill="none" stroke="black" stroke-width="2" />
+        <g stroke-linecap="round" stroke="rgba(0,0,0,1)">
+          <g id="clockFaceMTickGroup5" stroke-linecap="round" stroke="rgba(0,0,0,1)">
+            <line x1="0" x2="0" y1="-76" y2="-62" stroke-width="2" />
+            <line id="clockFaceMTickSm" x1="0" x2="0" y1="-76" y2="-67" stroke-width="1" transform="rotate(12)" />
+            <use href="#clockFaceMTickSm" transform="rotate(12)" />
+            <use href="#clockFaceMTickSm" transform="rotate(24)" />
+            <use href="#clockFaceMTickSm" transform="rotate(36)" />
+          </g>
+
+          <use href="#clockFaceMTickGroup5" transform="rotate(60)" />
+          <use href="#clockFaceMTickGroup5" transform="rotate(120)" />
+          <use href="#clockFaceMTickGroup5" transform="rotate(180)" />
+          <use href="#clockFaceMTickGroup5" transform="rotate(240)" />
+          <use href="#clockFaceMTickGroup5" transform="rotate(300)" />
+        </g>
+        <g transform="translate(-13 7)" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400">
+          <text transform="translate(0 -50)">30m</text>
+          <text transform="translate(12) rotate(60) translate(0 -47) rotate(-60)">5</text>
+          <text transform="rotate(120) translate(0 -47) rotate(-120)">10</text>
+          <text transform="translate(0 53)">15</text>
+          <text transform="rotate(240) translate(0 -47) rotate(-240)">20</text>
+          <text transform="rotate(300) translate(0 -47) rotate(-300)">25</text>
+        </g>
+        <g filter="url(#filterShadowSm)">
+          <g id="clockHandMinute">
+            <title>Minutes</title>
+            <path fill="#db0606" stroke="#d00000" stroke-opacity="0.9" stroke-linejoin="round" stroke-width="2"
+              d="M 3.7 -11.4 A 12 12 0 1 1 -3.7 -11.4 L -2 -69 0 -71 2 -69 Z" />
+          </g>
+        </g>
+        <g id="clockHandScrew">
+          <circle r="5" stroke="#696969" stroke-opacity="0.9" fill="#f2f2f2" />
+        </g>
+      </g>
+
+      <g id="clockFaceHours" transform="translate(-105)">
+        <circle r="76" fill="none" stroke="black" stroke-width="2" />
+        <g stroke-linecap="round" stroke="rgba(0,0,0,1)">
+          <g id="clockFaceHTickGroup4">
+            <g id="clockFaceHTickGroup1">
+              <line x1="0" x2="0" y1="-76" y2="-62" stroke-width="2" />
+              <line x1="0" x2="0" y1="-76" y2="-67" stroke-width="1" transform="rotate(15)" />
+            </g>
+            <use href="#clockFaceHTickGroup1" transform="rotate(30)" />
+            <use href="#clockFaceHTickGroup1" transform="rotate(60)" />
+          </g>
+          <use href="#clockFaceHTickGroup4" transform="rotate(90)" />
+          <use href="#clockFaceHTickGroup4" transform="rotate(180)" />
+          <use href="#clockFaceHTickGroup4" transform="rotate(270)" />
+        </g>
+        <g transform="translate(-6 8)" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400">
+          <text transform="translate(-7 -50)">12h</text>
+          <text transform="rotate(60) translate(0 -50) rotate(-60)">2</text>
+          <text transform="rotate(120) translate(0 -50) rotate(-120)">4</text>
+          <text transform="rotate(180) translate(0 -50) rotate(-180)">6</text>
+          <text transform="rotate(240) translate(0 -50) rotate(-240)">8</text>
+          <text transform="translate(-7) rotate(300) translate(0 -50) rotate(-300)">10</text>
+        </g>
+        <g filter="url(#filterShadowSm)">
+          <g id="clockHandHour">
+            <title>Hours</title>
+            <path fill="#0606bb" stroke="#0000b0" stroke-opacity="0.9" stroke-linejoin="round" stroke-width="2"
+              d="M 3.7 -11.4 A 12 12 0 1 1 -3.7 -11.4 L -2 -69 0 -71 2 -69 Z" />
+          </g>
+        </g>
+        <use href="#clockHandScrew" />
+      </g>
+    </g>
+
+    <g filter="url(#filterShadowMd)">
+      <g id="clockHandSecond">
+        <title>Seconds</title>
+        <path fill="#db0606" stroke="#d00000" stroke-opacity="0.9" stroke-linejoin="round" stroke-width="2"
+          d="M 6.8 -20.9 A 22 22 0 1 1 -6.8 -20.9 L -2 -277 0 -281 2 -277 Z" />
+      </g>
+    </g>
+    <use href="#clockHandScrew" />
+  </g>
+  <script>
+    'use strict';
+    var clockIntervalID;
+    var clockLastT;
+    var clockLastS;
+    var clockLastM;
+    var clockLastH;
+    var clockDeltaT = 0;
+
+    function updateHands(h, m, s) {
+      if (s !== clockLastS) {
+        clockLastS = s;
+        document.getElementById('clockHandSecond').setAttribute('transform', 'rotate(' + s + ')');
+      }
+      if (m !== clockLastM) {
+        clockLastM = m;
+        document.getElementById('clockHandMinute').setAttribute('transform', 'rotate(' + m + ')');
+      }
+      if (h !== clockLastH) {
+        clockLastH = h;
+        document.getElementById('clockHandHour').setAttribute('transform', 'rotate(' + h + ')');
+      }
+    }
+
+    function clockStop() {
+      if (clockIntervalID) {
+        clearInterval(clockIntervalID);
+        clockIntervalID = undefined;
+        clockDeltaT = clockUpdate();
+      }
+    }
+
+    function clockUpdate() {
+      var time = Date.now() - clockLastT + clockDeltaT;
+      var s = Math.floor(6 * ((time % 60000) / 1000));
+      var m = 12 * (Math.floor(time / 1000 / 60) % 30);
+      var h = 15 * (Math.floor(time / 1000 / 60 / 30) % 48);
+
+      updateHands(h, m, s);
+      return time;
+    }
+
+    document.getElementById('clockButtonStart').addEventListener('click', (event) => {
+      if (clockIntervalID) {
+        clockStop();
+      } else {
+        clockLastT = Date.now();
+        clockIntervalID = setInterval(clockUpdate, 100);
+      }
+    })
+
+    document.getElementById('clockButtonReset').addEventListener('click', (event) => {
+      if (clockIntervalID) {
+        clockStop();
+      } else {
+        clockDeltaT = 0;
+        updateHands(0, 0, 0);
+      }
+    })
+
+    function pie(radius, angle) {
+      var x = radius * Math.sin(angle * Math.PI / 180);
+      var y = radius * -Math.cos(angle * Math.PI / 180);
+      var largeArcFlag = angle > 180 ? "1" : "0";
+
+      var d = [
+        "M", 0, -radius,
+        "A", radius, radius, 0, largeArcFlag, 1, x, y,
+        "L", 0, 0,
+        "Z"
+      ].join(" ");
+
+      return d;
+    }
+
+  </script>
+</svg>
