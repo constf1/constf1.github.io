@@ -1,13 +1,13 @@
-<svg width="750" height="750" xmlns="http://www.w3.org/2000/svg">
+<svg width="760" height="760" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="filterShadowLg">
-      <feDropShadow dx="7" dy="7" stdDeviation="7" />
+    <filter id="filterShadowLg" width="150%" height="150%">
+      <feDropShadow dx="7" dy="7" stdDeviation="8" />
     </filter>
-    <filter id="filterShadowMd">
-      <feDropShadow dx="2" dy="2" stdDeviation="2" />
+    <filter id="filterShadowMd" width="150%" height="150%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" />
     </filter>
-    <filter id="filterShadowSm">
-      <feDropShadow dx="1" dy="1" stdDeviation="1" />
+    <filter id="filterShadowSm" width="160%" height="160%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1.5" />
     </filter>
     <radialGradient id="radialGradientClockFace">
       <stop offset="0%" stop-color="#DBDBDB" />
@@ -45,9 +45,20 @@
       <stop offset="66%" stop-color="#EAEAEA" />
       <stop offset="100%" stop-color="#696969" />
     </linearGradient>
+    <linearGradient id="linearGradientClockFaceMillis">
+      <stop offset="0%" stop-color="#901010" />
+      <stop offset="10%" stop-color="#bb2020" />
+      <stop offset="50%" stop-color="#ff6060" />
+      <stop offset="90%" stop-color="#aa1010" />
+      <stop offset="100%" stop-color="#800000" />
+    </linearGradient>
+    <clipPath id="clipPathFaceMillis">
+      <path id="pathFaceMillis"
+        d="M 47.5 82.272 a 46.5 46.5 0 0 1 46.5 80.54 a 188 188 0 0 1 -188 0 a 46.5 46.5 0 0 1 46.5 -80.54 a 95 95 0 0 0 95 0" />
+    </clipPath>
   </defs>
-  <!-- <image href="stopwatch-880x880.png" height="880" width="880" style="visibility: hidden;" /> -->
-  <g transform="translate(375 375)">
+
+  <g transform="translate(380 380)">
     <g>
       <g filter="url(#filterShadowLg)">
         <g transform="rotate(-45) translate(-30 -400)">
@@ -82,12 +93,11 @@
             <!-- <line x1="0" x2="0" y1="-289" y2="0" stroke-width="1" stroke="magenta" transform="rotate(-6)"/> -->
             <line x1="0" x2="0" y1="-289" y2="-253" stroke-width="3" />
             <g id="clockFaceSTickGroup1">
-              <g id="clockFaceSTickGroup0" transform="rotate(1)">
+              <g id="clockFaceSTickGroup0" transform="rotate(1.2)">
                 <line id="clockFaceSTickSm" x1="0" x2="0" y1="-289" y2="-273" stroke-width="1" />
-                <use href="#clockFaceSTickSm" transform="rotate(1)" />
-                <use href="#clockFaceSTickSm" transform="rotate(2)" />
-                <use href="#clockFaceSTickSm" transform="rotate(3)" />
-                <use href="#clockFaceSTickSm" transform="rotate(4)" />
+                <use href="#clockFaceSTickSm" transform="rotate(1.2)" />
+                <use href="#clockFaceSTickSm" transform="rotate(2.4)" />
+                <use href="#clockFaceSTickSm" transform="rotate(3.6)" />
               </g>
               <line x1="0" x2="0" y1="-289" y2="-265" stroke-width="2" transform="rotate(6)" />
             </g>
@@ -126,7 +136,53 @@
       <!-- <circle r="220" fill="none" stroke="magenta" /> -->
       <!-- <circle r="190" fill="none" stroke="magenta" /> -->
 
-      <g id="clockFaceMinutes" transform="translate(105)">
+      <g clip-path="url(#clipPathFaceMillis)">
+        <g id="clockFaceMillis">
+          <!-- <circle r="188" fill="none" stroke="black" stroke-width="2" /> -->
+          <!-- <circle r="95" fill="none" stroke="black" stroke-width="2" /> -->
+          <g stroke-linecap="round" stroke="black" fill="none">
+            <g id="clockFaceMsTickGroup20">
+              <g id="clockFaceMsTickGroup10">
+                <path stroke-width="3" d="M0 -187v24m0 44v24" />
+                <path stroke-width="2" d="M0 -187v20m0 52v20" transform="rotate(18)" />
+                <g id="clockFaceMsTickGroup4">
+                  <path id="clockFaceMsTick1" stroke-width="1" d="M0 -187v16m0 60v16" transform="rotate(3.6)" />
+                  <use href="#clockFaceMsTick1" transform="rotate(3.6)" />
+                  <use href="#clockFaceMsTick1" transform="rotate(7.2)" />
+                  <use href="#clockFaceMsTick1" transform="rotate(10.8)" />
+                </g>
+                <use href="#clockFaceMsTickGroup4" transform="rotate(18)" />
+              </g>
+              <use href="#clockFaceMsTickGroup10" transform="rotate(36)" />
+            </g>
+            <use href="#clockFaceMsTickGroup20" transform="rotate(72)" />
+            <use href="#clockFaceMsTickGroup20" transform="rotate(144)" />
+            <use href="#clockFaceMsTickGroup20" transform="rotate(216)" />
+            <use href="#clockFaceMsTickGroup20" transform="rotate(288)" />
+          </g>
+          <g font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="400">
+            <text transform="translate(-11 155)">0</text>
+            <text transform="rotate(36) translate(-11 155)">9</text>
+            <text transform="rotate(72) translate(-11 155)">8</text>
+            <text transform="rotate(108) translate(-8 155)">7</text>
+            <text transform="rotate(144) translate(-11 155)">6</text>
+            <text transform="rotate(180) translate(-11 155)">5</text>
+            <text transform="rotate(216) translate(-14.2 155)">4</text>
+            <text transform="rotate(252) translate(-11 155)">3</text>
+            <text transform="rotate(288) translate(-11 155)">2</text>
+            <text transform="rotate(324) translate(-12.65 155)">1</text>
+          </g>
+        </g>
+      </g>
+      <g>
+        <title>Milliseconds</title>
+        <path stroke="red" stroke-width="5" stroke-opacity="0.7" fill="none" d="M 0 95 v 93" />
+        <path id="pathClockFaceMillis" stroke="darkred" stroke-width="1" fill-opacity="0.1"
+          fill="url(#linearGradientClockFaceMillis)"
+          d="M 47.5 82.272 a 46.5 46.5 0 0 1 46.5 80.54 a 188 188 0 0 1 -188 0 a 46.5 46.5 0 0 1 46.5 -80.54 a 95 95 0 0 0 95 0" />
+      </g>
+
+      <g id="clockFaceMinutes" transform="translate(102 -48)">
         <circle r="76" fill="none" stroke="black" stroke-width="2" />
         <g stroke-linecap="round" stroke="rgba(0,0,0,1)">
           <g id="clockFaceMTickGroup5" stroke-linecap="round" stroke="rgba(0,0,0,1)">
@@ -163,7 +219,7 @@
         </g>
       </g>
 
-      <g id="clockFaceHours" transform="translate(-105)">
+      <g id="clockFaceHours" transform="translate(-102 -48)">
         <circle r="76" fill="none" stroke="black" stroke-width="2" />
         <g stroke-linecap="round" stroke="rgba(0,0,0,1)">
           <g id="clockFaceHTickGroup4">
@@ -200,8 +256,8 @@
     <g filter="url(#filterShadowMd)">
       <g id="clockHandSecond">
         <title>Seconds</title>
-        <path fill="#db0606" stroke="#d00000" stroke-opacity="0.9" stroke-linejoin="round" stroke-width="2"
-          d="M 6.8 -20.9 A 22 22 0 1 1 -6.8 -20.9 L -2 -277 0 -281 2 -277 Z" />
+        <path fill="#db0606" fill-opacity="0.9" stroke="#d00000" stroke-opacity="0.8" stroke-linejoin="round"
+          stroke-width="2" d="M 6.8 -20.9 A 22 22 0 1 1 -6.8 -20.9 L -2 -277 0 -281 2 -277 Z" />
       </g>
     </g>
     <use href="#clockHandScrew" />
@@ -230,17 +286,30 @@
       }
     }
 
+    function showDelta(delta) {
+      if (clockDeltaT !== delta) {
+        clockDeltaT = delta;
+        var ms = Math.floor(36 * (clockDeltaT % 1000) / 100);
+        document.getElementById('clockFaceMillis').setAttribute('transform', 'rotate(' + ms + ')');
+      }
+      document.getElementById('pathClockFaceMillis').setAttribute('fill-opacity', '0.1');
+    }
+
+    function hideDelta() {
+      document.getElementById('pathClockFaceMillis').setAttribute('fill-opacity', '0.75');
+    }
+
     function clockStop() {
       if (clockIntervalID) {
         clearInterval(clockIntervalID);
         clockIntervalID = undefined;
-        clockDeltaT = clockUpdate();
+        showDelta(clockUpdate());
       }
     }
 
     function clockUpdate() {
       var time = Date.now() - clockLastT + clockDeltaT;
-      var s = Math.floor(6 * ((time % 60000) / 1000));
+      var s = 1.2 * Math.floor((time % 60000) / 200);
       var m = 12 * (Math.floor(time / 1000 / 60) % 30);
       var h = 15 * (Math.floor(time / 1000 / 60 / 30) % 48);
 
@@ -254,6 +323,7 @@
       } else {
         clockLastT = Date.now();
         clockIntervalID = setInterval(clockUpdate, 100);
+        hideDelta();
       }
     })
 
@@ -261,7 +331,7 @@
       if (clockIntervalID) {
         clockStop();
       } else {
-        clockDeltaT = 0;
+        showDelta(0);
         updateHands(0, 0, 0);
       }
     })
