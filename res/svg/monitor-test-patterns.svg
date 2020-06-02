@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <pattern id="pattern1" x="0" y="0" width="4" height="4" fill="green" patternUnits="userSpaceOnUse">
+      <g stroke="none">
+        <rect height="4" width="4" />
+        <g fill="black" fill-opacity="0.5">
+          <rect x="0" y="0" width="1" height="4" />
+          <rect x="0" y="0" width="4" height="1" />
+        </g>
+      </g>
+    </pattern>
+    <pattern id="pattern2" x="0" y="0" width="2" height="2" fill="white" patternUnits="userSpaceOnUse">
+      <g stroke="none">
+        <rect height="2" width="2" />
+        <g fill="black">
+          <rect x="0" y="0" width="1" height="1" />
+          <rect x="1" y="1" width="1" height="1" />
+        </g>
+      </g>
+    </pattern>
+    <pattern id="pattern3" x="0" y="0" width="128" height="128" fill="yellow" patternUnits="userSpaceOnUse">
+      <g stroke="none">
+        <rect height="128" width="128" />
+      </g>
+      <g fill="black" stroke="none">
+        <rect x="0" y="0" width="32" height="32" fill-opacity="0.9" />
+        <rect x="64" y="0" width="32" height="32" fill-opacity="0.8" />
+        <rect x="32" y="32" width="32" height="32" fill-opacity="0.7" />
+        <rect x="96" y="32" width="32" height="32" fill-opacity="0.6" />
+        <rect x="0" y="64" width="32" height="32" fill-opacity="0.4" />
+        <rect x="64" y="64" width="32" height="32" fill-opacity="0.3" />
+        <rect x="32" y="96" width="32" height="32" fill-opacity="0.2" />
+        <rect x="96" y="96" width="32" height="32" fill-opacity="0.1" />
+      </g>
+    </pattern>
+  </defs>
+  <rect id="rectMonitor" fill="url(#pattern1)" width="100%" height="100%" stroke="none" />
+  <script>
+    var testPatternId = 1;
+    var testPatternTransform = {
+      x: 0,
+      y: 0
+    };
+    var testColors = [
+      "AliceBlue",
+      "AntiqueWhite",
+      "Aqua",
+      "Aquamarine",
+      "Azure",
+      "Beige",
+      "Bisque",
+      "Black",
+      "BlanchedAlmond",
+      "Blue",
+      "BlueViolet",
+      "Brown",
+      "BurlyWood",
+      "CadetBlue",
+      "Chartreuse",
+      "Chocolate",
+      "Coral",
+      "CornflowerBlue",
+      "Cornsilk",
+      "Crimson",
+      "Cyan",
+      "DarkBlue",
+      "DarkCyan",
+      "DarkGoldenRod",
+      "DarkGrey",
+      "DarkGreen",
+      "DarkKhaki",
+      "DarkMagenta",
+      "DarkOliveGreen",
+      "DarkOrange",
+      "DarkOrchid",
+      "DarkRed",
+      "DarkSalmon",
+      "DarkSeaGreen",
+      "DarkSlateBlue",
+      "DarkSlateGrey",
+      "DarkTurquoise",
+      "DarkViolet",
+      "DeepPink",
+      "DeepSkyBlue",
+      "DimGrey",
+      "DodgerBlue",
+      "FireBrick",
+      "FloralWhite",
+      "ForestGreen",
+      "Fuchsia",
+      "Gainsboro",
+      "GhostWhite",
+      "Gold",
+      "GoldenRod",
+      "Grey",
+      "Green",
+      "GreenYellow",
+      "HoneyDew",
+      "HotPink",
+      "IndianRed",
+      "Indigo",
+      "Ivory",
+      "Khaki",
+      "Lavender",
+      "LavenderBlush",
+      "LawnGreen",
+      "LemonChiffon",
+      "LightBlue",
+      "LightCoral",
+      "LightCyan",
+      "LightGoldenRodYellow",
+      "LightGrey",
+      "LightGreen",
+      "LightPink",
+      "LightSalmon",
+      "LightSeaGreen",
+      "LightSkyBlue",
+      "LightSlateGrey",
+      "LightSteelBlue",
+      "LightYellow",
+      "Lime",
+      "LimeGreen",
+      "Linen",
+      "Magenta",
+      "Maroon",
+      "MediumAquaMarine",
+      "MediumBlue",
+      "MediumOrchid",
+      "MediumPurple",
+      "MediumSeaGreen",
+      "MediumSlateBlue",
+      "MediumSpringGreen",
+      "MediumTurquoise",
+      "MediumVioletRed",
+      "MidnightBlue",
+      "MintCream",
+      "MistyRose",
+      "Moccasin",
+      "NavajoWhite",
+      "Navy",
+      "OldLace",
+      "Olive",
+      "OliveDrab",
+      "Orange",
+      "OrangeRed",
+      "Orchid",
+      "PaleGoldenRod",
+      "PaleGreen",
+      "PaleTurquoise",
+      "PaleVioletRed",
+      "PapayaWhip",
+      "PeachPuff",
+      "Peru",
+      "Pink",
+      "Plum",
+      "PowderBlue",
+      "Purple",
+      "RebeccaPurple",
+      "Red",
+      "RosyBrown",
+      "RoyalBlue",
+      "SaddleBrown",
+      "Salmon",
+      "SandyBrown",
+      "SeaGreen",
+      "SeaShell",
+      "Sienna",
+      "Silver",
+      "SkyBlue",
+      "SlateBlue",
+      "SlateGrey",
+      "Snow",
+      "SpringGreen",
+      "SteelBlue",
+      "Tan",
+      "Teal",
+      "Thistle",
+      "Tomato",
+      "Turquoise",
+      "Violet",
+      "Wheat",
+      "White",
+      "WhiteSmoke",
+      "Yellow",
+      "YellowGreen"
+    ];
+    var testColorIndex = -1;
+
+    function translatePattern(x, y) {
+      document.getElementById('pattern' + testPatternId).setAttribute('patternTransform', 'translate(' + x + ' ' + y +
+        ')');
+    }
+
+    function updateFillColor() {
+      if (++testColorIndex >= testColors.length) {
+        testColorIndex = 0;
+      }
+      document.getElementById('pattern' + testPatternId).setAttribute('fill', testColors[testColorIndex]);
+      console.log(testColors[testColorIndex]);
+    }
+
+    document.getElementById('rectMonitor').addEventListener('click', updateFillColor);
+
+    document.addEventListener("keydown", event => {
+      // console.log(event.key);
+      switch (event.key) {
+        case 'ArrowRight':
+          if (++testPatternTransform.x >= 128) {
+            testPatternTransform.x -= 128;
+          }
+          translatePattern(testPatternTransform.x, testPatternTransform.y);
+          break;
+        case 'ArrowDown':
+          if (++testPatternTransform.y >= 128) {
+            testPatternTransform.y -= 128;
+          }
+          translatePattern(testPatternTransform.x, testPatternTransform.y);
+          break;
+        case 'ArrowLeft':
+          if (0 > --testPatternTransform.x) {
+            testPatternTransform.x += 128;
+          }
+          translatePattern(testPatternTransform.x, testPatternTransform.y);
+          break;
+        case 'ArrowUp':
+          if (0 > --testPatternTransform.y) {
+            testPatternTransform.y += 128;
+          }
+          translatePattern(testPatternTransform.x, testPatternTransform.y);
+          break;
+        case 'Enter':
+          updateFillColor();
+          break;
+        case ' ':
+          ++testPatternId;
+          if (!document.getElementById('pattern' + testPatternId)) {
+            testPatternId = 1;
+          }
+          document.getElementById('rectMonitor').setAttribute('fill', 'url(#' + 'pattern' + testPatternId + ')');
+          break;
+      }
+    });
+
+  </script>
+</svg>
