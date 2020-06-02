@@ -1,0 +1,131 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="filterShadow">
+      <feDropShadow dx="2.5" dy="2.5" stdDeviation="0.98" />
+    </filter>
+    <radialGradient id="radialGradientClockFace">
+      <stop offset="0%" stop-color="#444" />
+      <stop offset="90%" stop-color="#444" />
+      <stop offset="95%" stop-color="#eee" />
+      <stop offset="100%" stop-color="#444" />
+    </radialGradient>
+    <linearGradient id="linearGradientClockHand">
+      <stop offset="0%" stop-color="#333" />
+      <stop offset="50%" stop-color="#aaa" />
+      <stop offset="100%" stop-color="#333" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(200 200)">
+    <g>
+      <circle r="180" fill="url(#radialGradientClockFace)" filter="url(#filterShadow)" />
+      <circle r="162" fill="#eee" />
+      <path id="clockFaceSeconds" d="M 0 0 Z" fill="rgba(144,238,144,0.8)" />
+      <path id="clockFaceMinutes" d="M 0 0 Z" fill="rgba(238,238,144,0.8)" />
+      <path id="clockFaceHours" d="M 0 0 Z" fill="rgba(238,144,144,0.8)" />
+
+      <g>
+        <g id="clockFaceTickGroupQuarter" stroke="rgba(0,0,0,0.8)" stroke-linecap="round">
+          <g id="clockFaceTickGroup">
+            <g stroke-width="3">
+              <line x1="0" x2="0" y1="-24" y2="-18" />
+              <line x1="0" x2="0" y1="-161" y2="-153" />
+            </g>
+            <line id="clockFaceTickM" x1="0" x2="0" y1="-161" y2="-155" transform="rotate(6)" stroke-width="2" />
+            <use href="#clockFaceTickM" transform="rotate(6)" />
+            <use href="#clockFaceTickM" transform="rotate(12)" />
+            <use href="#clockFaceTickM" transform="rotate(18)" />
+          </g>
+          <use href="#clockFaceTickGroup" transform="rotate(30)" />
+          <use href="#clockFaceTickGroup" transform="rotate(60)" />
+        </g>
+        <use href="#clockFaceTickGroupQuarter" transform="rotate(90)" />
+        <use href="#clockFaceTickGroupQuarter" transform="rotate(180)" />
+        <use href="#clockFaceTickGroupQuarter" transform="rotate(270)" />
+      </g>
+
+      <circle r="18" fill="#333" />
+    </g>
+
+    <g transform="translate(-9 11)" fill="#333" stroke="rgba(24, 24, 24, .5)" font-size="32" font-weight="600"
+      font-family="sans-serif">
+      <text transform="translate(-10 -140)">12</text>
+      <text transform="rotate(30) translate(0, -140) rotate(-30)">1</text>
+      <text transform="rotate(60) translate(0, -140) rotate(-60)">2</text>
+      <text transform="rotate(90) translate(0, -140) rotate(-90)">3</text>
+      <text transform="rotate(120) translate(0, -140) rotate(-120)">4</text>
+      <text transform="rotate(150) translate(0, -140) rotate(-150)">5</text>
+      <text transform="rotate(180) translate(0, -140) rotate(-180)">6</text>
+      <text transform="rotate(210) translate(0, -140) rotate(-210)">7</text>
+      <text transform="rotate(240) translate(0, -140) rotate(-240)">8</text>
+      <text transform="rotate(270) translate(0, -140) rotate(-270)">9</text>
+      <text transform="rotate(300) translate(-10, -140) rotate(-300)">10</text>
+      <text transform="rotate(330) translate(-10, -140) rotate(-330)">11</text>
+    </g>
+
+    <g id="clockHands" filter="url(#filterShadow)">
+      <g id="clockHandHours">
+        <rect width="12" x="-6" y="-6" height="104" rx="6" stroke="rgba(34,34,34,0.8)" transform="translate(0 -92)"
+          fill="url(#linearGradientClockHand)" />
+      </g>
+      <g id="clockHandMinutes">
+        <rect width="8" x="-4" y="-4" height="132" rx="4" stroke="rgba(51,51,51,0.8)" transform="translate(0 -122)"
+          fill="url(#linearGradientClockHand)" />
+      </g>
+      <g id="clockHandSeconds">
+        <rect width="4" x="-2" y="-2" height="160" rx="2" stroke="rgba(68,68,68,0.8)" transform="translate(0 -152)"
+          fill="url(#linearGradientClockHand)" />
+      </g>
+    </g>
+    <g id="clockCentralScrew">
+      <circle r="2" fill="#ccc" />
+    </g>
+  </g>
+  <script>
+    'use strict';
+
+    function pie(radius, angle) {
+      var x = radius * Math.sin(angle * Math.PI / 180);
+      var y = radius * -Math.cos(angle * Math.PI / 180);
+      var largeArcFlag = angle > 180 ? "1" : "0";
+
+      var d = [
+        "M", 0, -radius,
+        "A", radius, radius, 0, largeArcFlag, 1, x, y,
+        "L", 0, 0,
+        "Z"
+      ].join(" ");
+
+      return d;
+    }
+
+    var lastS;
+    var lastM;
+    var lastH;
+
+    function clockUpdate() {
+      var time = Date.now();
+      var date = new Date();
+      var s = 6 * date.getSeconds();
+      var m = 6 * date.getMinutes();
+      var h = 30 * (date.getHours() % 12) + m / 12;
+
+      // Update hands:
+      if (s !== lastS) {
+        lastS = s;
+        document.getElementById('clockHandSeconds').setAttribute('transform', 'rotate(' + s + ')');
+        document.getElementById('clockFaceSeconds').setAttribute("d", pie(156, s));
+      }
+      if (m !== lastM) {
+        lastM = m;
+        document.getElementById('clockHandMinutes').setAttribute('transform', 'rotate(' + m + ')');
+        document.getElementById('clockFaceMinutes').setAttribute("d", pie(128, m));
+      }
+      if (h !== lastH) {
+        lastH = h;
+        document.getElementById('clockHandHours').setAttribute('transform', 'rotate(' + h + ')');
+        document.getElementById('clockFaceHours').setAttribute("d", pie(100, h));
+      }
+    }
+    setInterval(clockUpdate, 100);
+  </script>
+</svg>
