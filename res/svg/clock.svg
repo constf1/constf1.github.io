@@ -4,10 +4,10 @@
       <feDropShadow dx="2.5" dy="2.5" stdDeviation="0.98" />
     </filter>
     <radialGradient id="radialGradientClockFace">
-      <stop offset="0%" stop-color="#444" />
-      <stop offset="90%" stop-color="#444" />
-      <stop offset="95%" stop-color="#eee" />
-      <stop offset="100%" stop-color="#444" />
+      <stop offset="0%" stop-color="#272727" />
+      <stop offset="90%" stop-color="#272727" />
+      <stop offset="95%" stop-color="#9b9b9b" />
+      <stop offset="100%" stop-color="#1c1c1c90" />
     </radialGradient>
     <linearGradient id="linearGradientClockHand">
       <stop offset="0%" stop-color="#333" />
@@ -28,6 +28,7 @@
           <g id="clockFaceTickGroup">
             <g stroke-width="3">
               <line x1="0" x2="0" y1="-24" y2="-18" />
+              <!-- <circle stroke="none" fill="magenta" r="22" cx="0" cy="-140"/> -->
               <line x1="0" x2="0" y1="-161" y2="-153" />
             </g>
             <line id="clockFaceTickM" x1="0" x2="0" y1="-161" y2="-155" transform="rotate(6)" stroke-width="2" />
@@ -46,8 +47,7 @@
       <circle r="18" fill="#333" />
     </g>
 
-    <g transform="translate(-9 11)" fill="#333" stroke="rgba(24, 24, 24, .5)" font-size="32" font-weight="600"
-      font-family="sans-serif">
+    <g transform="translate(-9 11)" fill="#333" stroke="none" font-size="32" font-weight="600" font-family="sans-serif">
       <text transform="translate(-10 -140)">12</text>
       <text transform="rotate(30) translate(0, -140) rotate(-30)">1</text>
       <text transform="rotate(60) translate(0, -140) rotate(-60)">2</text>
@@ -127,5 +127,6 @@
       }
     }
     setInterval(clockUpdate, 100);
+
   </script>
 </svg>
