@@ -1,5 +1,14 @@
-<svg viewBox="0 0 500 500" width="100vmin" height="100vmin" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <filter id="filterShadowLg" width="150%" height="150%">
+      <feDropShadow dx="7" dy="7" stdDeviation="8" />
+    </filter>
+    <filter id="filterShadowMd" width="150%" height="150%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" />
+    </filter>
+    <filter id="filterShadowSm" width="160%" height="160%">
+      <feDropShadow dx="1" dy="1" stdDeviation="1.5" />
+    </filter>
     <linearGradient id="linearGradientLegs">
       <stop offset="0%" stop-color="#202020" />
       <stop offset="25%" stop-color="#a0a0a0" />
@@ -39,7 +48,7 @@
 
   <g fill="darkblue" stroke="#00000060" stroke-linejoin="round">
     <!-- legs -->
-    <g transform="translate(118 469)" fill="url(#linearGradientLegs)" stroke="#0b0b0b60">
+    <g transform="translate(118 469)" fill="url(#linearGradientLegs)" stroke="#0b0b0b60" filter="url(#filterShadowSm)">
       <path d="M0 0v 8 a 60 60 0 0 1 -36 0 v -8 z" />
       <path transform="translate(300)" d="M0 0v 8 a 60 60 0 0 1 -36 0 v -8 z" />
     </g>
@@ -56,13 +65,12 @@
     <path fill="#282828" d="M 280 30 l 98 283 h -256 l 98 -283 z" />
     <path fill="#5b5b5b" d="M 270 45 l 92 268 h -224 l 92 -268 z" />
 
-    <g font-size="12" font-family="monospace" font-weight="600" fill="#d0d0d0" stroke="none"
-      transform="translate(246 41)">
-      <text id="bpmLabel" text-anchor="end">30</text>
+    <g font-size="12" font-family="monospace" font-weight="600" fill="#eee" stroke="none" transform="translate(246 41)">
+      <text id="bpmText" text-anchor="end">30</text>
       <text text-anchor="start" transform="translate(10)">bpm</text>
     </g>
     <!-- scale -->
-    <path fill="url(#linearGradientScale)" d="M 270 45 v 268 h -40 v -268 z" />
+    <path fill="url(#linearGradientScale)" d="M 270 45 v 268 h -40 v -268 z" filter="url(#filterShadowSm)" />
     <!-- <path d="M 378 313 l 54 156 h -364 l 54 -156 z" /> -->
 
     <!-- ticks -->
@@ -97,11 +105,25 @@
           <text transform="translate(-200)">260</text>
         </g>
       </g>
+      <g fill="#d0d0d004" stroke="none" transform="translate(0 -60)" cursor="pointer">
+        <rect id="bpmRect40" y="40" x="0" width="20" height="20" />
+        <rect id="bpmRect60" y="60" x="20" width="20" height="20" />
+        <rect id="bpmRect80" y="80" x="0" width="20" height="20" />
+        <rect id="bpmRect100" y="100" x="20" width="20" height="20" />
+        <rect id="bpmRect120" y="120" x="0" width="20" height="20" />
+        <rect id="bpmRect140" y="140" x="20" width="20" height="20" />
+        <rect id="bpmRect160" y="160" x="0" width="20" height="20" />
+        <rect id="bpmRect180" y="180" x="20" width="20" height="20" />
+        <rect id="bpmRect200" y="200" x="0" width="20" height="20" />
+        <rect id="bpmRect220" y="220" x="20" width="20" height="20" />
+        <rect id="bpmRect240" y="240" x="0" width="20" height="20" />
+        <rect id="bpmRect260" y="260" x="20" width="20" height="20" />
+      </g>
     </g>
 
     <!-- pendulum  -->
     <g transform="translate(245 36)">
-      <g id="pendulum">
+      <g id="pendulum" filter="url(#filterShadowSm)">
         <rect fill="url(#linearGradientPendulum)" y="5" width="10" height="300" rx="5" />
         <path fill="none" stroke="#d0d0d0"
           d="M1 14.5h8m0 10h-8m0 10h8m0 10h-8m0 10h8m0 10h-8m0 10h8m0 10h-8m0 10h8m0 10h-8m0 10h8m0 10h-8m0 10h8m0 10h-8m0 10h8m0 10h-8m0 10h8m0 10h-8m0 10h8m0 10h-8m0 10h8m0 10h-8m0 10h8m0 10h-8" />
@@ -118,13 +140,21 @@
             </g>
           </g>
         </g>
-        <circle fill="#505050" r="2" cx="5" cy="277" />
+        <circle fill="#585858" r="2" cx="5" cy="277" />
       </g>
     </g>
 
     <!-- bottom -->
     <path fill="url(#linearGradientBottom)"
       d="M 378 313 l 50 145 a 10 10 0 0 1 -11 11 h -334 a 10 10 0 0 1 -11 -11 l 50 -145 z" />
+    <!-- <rect fill="none" x="138" y="313" width="224" height="156" /> -->
+    <!-- <rect fill="none" x="150" y="325" width="200" height="132" stroke-width="3" rx="2" /> -->
+    <rect fill="none" x="150" y="345" width="200" height="92" stroke-width="3" rx="2" filter="url(#filterShadowSm)" />
+    <rect fill="none" x="150" y="345" width="200" height="92" stroke="#eee" stroke-width="1" rx="2" />
+    <g font-size="40" font-family="monospace" font-weight="600" fill="#eee" stroke="none"
+      transform="translate(250 400)">
+      <text id="timeText" text-anchor="middle">00:00:00</text>
+    </g>
   </g>
   <!-- <circle cx="82" cy="459" r="10" stroke="blueviolet" fill="magenta" opacity="0.8" /> -->
   <script>
@@ -136,6 +166,14 @@
     var angleMin = 10;
     var angleMax = 60;
     var angleNow = 0;
+    var timeText = '00:00:00';
+
+    function padLeft(str, width) {
+      while (width > str.length) {
+        str = '0' + str;
+      }
+      return str;
+    }
 
     function onStop() {
       if (intervalID) {
@@ -147,19 +185,18 @@
 
     function onWeightUpdate(bpm) {
       if (bpmNow !== bpm) {
+        onStop();
         bpmNow = bpm;
-        document.getElementById('bpmLabel').innerHTML = '' + bpmNow;
+        document.getElementById('bpmText').innerHTML = '' + bpmNow;
         document.getElementById('pendulumWeight').setAttribute('transform', 'translate(0 ' + (bpmNow - bpmMin) + ')');
       }
     }
 
     function onWeightUp() {
-      onStop();
       onWeightUpdate(Math.max(bpmMin, bpmNow - 1));
     }
 
     function onWeightDown() {
-      onStop();
       onWeightUpdate(Math.min(bpmMax, bpmNow + 1));
     }
 
@@ -182,11 +219,22 @@
       }
     }
 
+    function updateTimeText(time) {
+      var s = Math.floor((time % 60000) / 1000);
+      var m = Math.floor((time % (60000 * 60)) / 60000);
+      var h = Math.floor((time % (60000 * 60 * 100)) / 3600000);
+      var text = (h > 9 ? '' : '0') + h + (m > 9 ? ':' : ':0') + m + (s > 9 ? ':' : ':0') + s;
+      if (timeText !== text) {
+        document.getElementById('timeText').innerHTML = timeText = text;
+      }
+    }
+
     function onUpdate() {
       var time = Date.now() - time0;
       var delta = 60 * 1000 / bpmNow;
       var angle = getPendulumAngle(time, 2 * delta);
       updatePendulumAngle(Math.round(angle));
+      updateTimeText(time);
     }
 
     function toggleUpdate() {
@@ -212,6 +260,11 @@
       }
     }
 
+    [40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260].forEach(function (bpm) {
+      document.getElementById('bpmRect' + bpm).addEventListener('click', function () {
+        onWeightUpdate(bpm);
+      });
+    });
     document.getElementById('pendulumWeightArrowUp').addEventListener('click', onWeightUp);
     document.getElementById('pendulumWeightArrowDown').addEventListener('click', onWeightDown);
     document.getElementById('pendulumTop').addEventListener('click', toggleUpdate);
