@@ -149,11 +149,19 @@
       d="M 378 313 l 50 145 a 10 10 0 0 1 -11 11 h -334 a 10 10 0 0 1 -11 -11 l 50 -145 z" />
     <!-- <rect fill="none" x="138" y="313" width="224" height="156" /> -->
     <!-- <rect fill="none" x="150" y="325" width="200" height="132" stroke-width="3" rx="2" /> -->
-    <rect fill="none" x="150" y="345" width="200" height="92" stroke-width="3" rx="2" filter="url(#filterShadowSm)" />
-    <rect fill="none" x="150" y="345" width="200" height="92" stroke="#eee" stroke-width="1" rx="2" />
-    <g font-size="40" font-family="monospace" font-weight="600" fill="#eee" stroke="none"
-      transform="translate(250 400)">
-      <text id="timeText" text-anchor="middle">00:00:00</text>
+    <g stroke-width="3" filter="url(#filterShadowSm)">
+      <rect fill="none" x="150" y="345" width="200" height="92" rx="2" />
+      <line x1="158" y1="390" x2="342" y2="390" stroke-linecap="round" />
+    </g>
+    <g stroke="#eee" stroke-width="1">
+      <rect fill="none" x="150" y="345" width="200" height="92" rx="2" />
+      <line x1="158" y1="390" x2="342" y2="390" stroke-linecap="round" />
+    </g>
+
+    <g font-size="40" font-family="monospace" font-weight="600" fill="#eee" stroke="none" text-anchor="middle"
+      transform="translate(250 380)">
+      <text id="textTime">00:00:00</text>
+      <text id="textBeat" transform="translate(0 45)">00000000</text>
     </g>
   </g>
   <!-- <circle cx="82" cy="459" r="10" stroke="blueviolet" fill="magenta" opacity="0.8" /> -->
@@ -166,7 +174,8 @@
     var angleMin = 10;
     var angleMax = 60;
     var angleNow = 0;
-    var timeText = '00:00:00';
+    var textTime = '00:00:00';
+    var textBeat = '00000000';
 
     function padLeft(str, width) {
       while (width > str.length) {
@@ -219,13 +228,19 @@
       }
     }
 
-    function updateTimeText(time) {
+    function updateText(time) {
       var s = Math.floor((time % 60000) / 1000);
       var m = Math.floor((time % (60000 * 60)) / 60000);
       var h = Math.floor((time % (60000 * 60 * 100)) / 3600000);
       var text = (h > 9 ? '' : '0') + h + (m > 9 ? ':' : ':0') + m + (s > 9 ? ':' : ':0') + s;
-      if (timeText !== text) {
-        document.getElementById('timeText').innerHTML = timeText = text;
+      if (textTime !== text) {
+        document.getElementById('textTime').innerHTML = textTime = text;
+      }
+
+      m = Math.floor(bpmNow * time / 60000);
+      text = padLeft('' + m, 8);
+      if (textBeat !== text) {
+        document.getElementById('textBeat').innerHTML = textBeat = text;
       }
     }
 
@@ -234,7 +249,7 @@
       var delta = 60 * 1000 / bpmNow;
       var angle = getPendulumAngle(time, 2 * delta);
       updatePendulumAngle(Math.round(angle));
-      updateTimeText(time);
+      updateText(time);
     }
 
     function toggleUpdate() {
