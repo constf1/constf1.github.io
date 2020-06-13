@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-256 -256 512 512" style="background-color:magenta">
+  <g>
+    <circle r="220" stroke="#161616" stroke-width="16" fill="#ddd" />
+
+    <g font-family="monospace" font-size="64" font-weight="600" fill="#161616" stroke="none" text-anchor="middle" transform="translate(0 18)" style="pointer-events:none;">
+      <text transform="translate(113.137 -113.137)">1</text>
+      <text transform="translate(41.411 -154.548)">2</text>
+      <text transform="translate(-41.411 -154.548)">3</text>
+      <text transform="translate(-113.137 -113.137)">4</text>
+      <text transform="translate(-154.548 -41.411)">5</text>
+      <text transform="translate(-154.548 41.411)">6</text>
+      <text transform="translate(-113.137  113.137)">7</text>
+      <text transform="translate(-41.411 154.548)">8</text>
+      <text transform="translate(41.411 154.548)">9</text>
+      <text transform="translate(113.137 113.137)">0</text>
+    </g>
+    <g opacity="0.1" fill="yellow" stroke="#161616" stroke-width="4" cursor="pointer">
+      <circle id="signalDigit1" r="40" transform="translate(113.137 -113.137)" />
+      <circle id="signalDigit2" r="40" transform="translate(41.411 -154.548)" />
+      <circle id="signalDigit3" r="40" transform="translate(-41.411 -154.548)" />
+      <circle id="signalDigit4" r="40" transform="translate(-113.137 -113.137)" />
+      <circle id="signalDigit5" r="40" transform="translate(-154.548 -41.411)" />
+      <circle id="signalDigit6" r="40" transform="translate(-154.548 41.411)" />
+      <circle id="signalDigit7" r="40" transform="translate(-113.137  113.137)" />
+      <circle id="signalDigit8" r="40" transform="translate(-41.411 154.548)" />
+      <circle id="signalDigit9" r="40" transform="translate(41.411 154.548)" />
+      <circle id="signalDigit0" r="40" transform="translate(113.137 113.137)" />
+    </g>
+
+    <g>
+      <circle r="0" opacity="0.125" stroke="none" fill="#444">
+        <set attributeName="r" to="210" begin="signalDigit1.click" dur="1s" />
+        <set attributeName="r" to="210" begin="signalDigit2.click" dur="1.25s" />
+        <set attributeName="r" to="210" begin="signalDigit3.click" dur="1.5s" />
+        <set attributeName="r" to="210" begin="signalDigit4.click" dur="1.75s" />
+        <set attributeName="r" to="210" begin="signalDigit5.click" dur="2s" />
+        <set attributeName="r" to="210" begin="signalDigit6.click" dur="2.25s" />
+        <set attributeName="r" to="210" begin="signalDigit7.click" dur="2.5s" />
+        <set attributeName="r" to="210" begin="signalDigit8.click" dur="2.75s" />
+        <set attributeName="r" to="210" begin="signalDigit9.click" dur="3s" />
+        <set attributeName="r" to="210" begin="signalDigit0.click" dur="3.25s" />
+      </circle>
+
+      <circle r="35" fill="none" stroke-width="6" stroke="#e84848">
+        <set attributeName="cx" to="113.137" begin="signalDigit1.click" dur="1s" />
+        <set attributeName="cx" to="41.411" begin="signalDigit2.click" dur="1.25s" />
+        <set attributeName="cx" to="-41.411" begin="signalDigit3.click" dur="1.5s" />
+        <set attributeName="cx" to="-113.137" begin="signalDigit4.click" dur="1.75s" />
+        <set attributeName="cx" to="-154.548" begin="signalDigit5.click" dur="2s" />
+        <set attributeName="cx" to="-154.548" begin="signalDigit6.click" dur="2.25s" />
+        <set attributeName="cx" to="-113.137" begin="signalDigit7.click" dur="2.5s" />
+        <set attributeName="cx" to="-41.411" begin="signalDigit8.click" dur="2.75s" />
+        <set attributeName="cx" to="41.411" begin="signalDigit9.click" dur="3s" />
+        <set attributeName="cx" to="113.137" begin="signalDigit0.click" dur="3.25s" />
+
+        <set attributeName="cy" to="-113.137" begin="signalDigit1.click" dur="1s" />
+        <set attributeName="cy" to="-154.548" begin="signalDigit2.click" dur="1.25s" />
+        <set attributeName="cy" to="-154.548" begin="signalDigit3.click" dur="1.5s" />
+        <set attributeName="cy" to="-113.137" begin="signalDigit4.click" dur="1.75s" />
+        <set attributeName="cy" to="-41.411" begin="signalDigit5.click" dur="2s" />
+        <set attributeName="cy" to="41.411" begin="signalDigit6.click" dur="2.25s" />
+        <set attributeName="cy" to="113.137" begin="signalDigit7.click" dur="2.5s" />
+        <set attributeName="cy" to="154.548" begin="signalDigit8.click" dur="2.75s" />
+        <set attributeName="cy" to="154.548" begin="signalDigit9.click" dur="3s" />
+        <set attributeName="cy" to="113.137" begin="signalDigit0.click" dur="3.25s" />
+      </circle>
+
+      <path fill-rule="evenodd" fill="#484848" stroke-width="6" stroke="#282828" opacity="0.5"
+        d="M 0 -210 a 210 210 0 0 0 0 420 a 210 210 0 0 0 0 -420
+          M  113.137 -113.137 m 0 -35 a 35 35 0 0 0 0 70 a 35 35 0 0 0 0 -70
+          M   41.411 -154.548 m 0 -35 a 35 35 0 0 0 0 70 a 35 35 0 0 0 0 -70
+          M  -41.411 -154.548 m 0 -35 a 35 35 0 0 0 0 70 a 35 35 0 0 0 0 -70
+          M -113.137 -113.137 m 0 -35 a 35 35 0 0 0 0 70 a 35 35 0 0 0 0 -70
+          M -154.548  -41.411 m 0 -35 a 35 35 0 0 0 0 70 a 35 35 0 0 0 0 -70
+          M -154.548   41.411 m 0 -35 a 35 35 0 0 0 0 70 a 35 35 0 0 0 0 -70
+          M -113.137  113.137 m 0 -35 a 35 35 0 0 0 0 70 a 35 35 0 0 0 0 -70
+          M  -41.411  154.548 m 0 -35 a 35 35 0 0 0 0 70 a 35 35 0 0 0 0 -70
+          M   41.411  154.548 m 0 -35 a 35 35 0 0 0 0 70 a 35 35 0 0 0 0 -70
+          M  113.137  113.137 m 0 -35 a 35 35 0 0 0 0 70 a 35 35 0 0 0 0 -70"
+      />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        values="0;45;0" dur="1s" begin="signalDigit1.click" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        values="0;75;0" dur="1.25s" begin="signalDigit2.click" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        values="0;105;0" dur="1.5s" begin="signalDigit3.click" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        values="0;135;0" dur="1.75s" begin="signalDigit4.click" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        values="0;165;0" dur="2s" begin="signalDigit5.click" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        values="0;195;0" dur="2.25s" begin="signalDigit6.click" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        values="0;225;0" dur="2.5s" begin="signalDigit7.click" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        values="0;255;0" dur="2.75s" begin="signalDigit8.click" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        values="0;285;0" dur="3s" begin="signalDigit9.click" />
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate"
+        values="0;315;0" dur="3.25s" begin="signalDigit0.click" />
+    </g>
+
+    <circle r="110" stroke="#282828" stroke-width="6" fill="#eee" />
+    <!-- <circle r="1" stroke="#282828" stroke-width="6" fill="#eee"/> -->
+    <!-- <circle r="64" stroke="#282828" stroke-width="6" fill="#eee" /> -->
+
+    <!-- <path opacity="0.8" fill="#ffcc66" stroke="yellow" stroke-width="6" d="M117 0a 4 4 0 0 1 8 0a 35 35 0 0 0 70 0a 12 12 0 0 1 24 0a 220 220 0 0 1 -7.496 56.94a 8 10 0 0 1 -10 6L 0 0 a 4 4 0 0 1 -4 -4z" /> -->
+    <path transform="rotate(15)" fill="#404040" stroke="#282828" stroke-width="6" d="M122 12a 6 6 0 0 1 0 -12h32a 42 42 0 0 0 42 -42a 6 6 0 0 1 12 -2a 180 180 0 0 1 4 50a 6 6 0 0 1 -6 6z" />
+  </g>
+</svg>
