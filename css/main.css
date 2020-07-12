@@ -9,4 +9,5 @@ a:link, a:visited {
 
 a:hover, a:active {
   background-color: darkred;
+  text-decoration: underline;
 }
