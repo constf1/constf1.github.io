@@ -5,9 +5,42 @@ a:link, a:visited {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  border-radius: 0.5em;
+  margin: 0.25em;
 }
 
 a:hover, a:active {
   background-color: darkred;
   text-decoration: underline;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.section2 {
+  padding: 1em;
+  border-radius: 0.5em;
+  background: linear-gradient(rgba(255,138,0,.2),#fff);
+  margin: 1em;
+}
+
+.section3 {
+  padding: 0.5em;
+  background-color: #fff8;
+  border: 1px solid #8888;
+  border-bottom: none;
+}
+
+.section3:first-of-type {
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+}
+
+.section3:last-of-type {
+  border-bottom: 1px solid #8888;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
 }
